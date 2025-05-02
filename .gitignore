@@ -5,6 +5,7 @@ target/
 out/artifacts/YouTubeDownloaderEX_jar/*.jar
 src/main/resources/bin/ffmpeg.exe
 src/main/resources/bin/ffprobe.exe
+src/main/resources/script/build
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
