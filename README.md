@@ -7,7 +7,7 @@ Let's lead a happy and pleasant video life with YouTube Downloader EX.
 ## Features
 
 1. Quick startup  
-   YouTube Downloader EX starts up in 1 second (measured on my machine, i7-3770K).
+   YouTube Downloader EX starts up in around 0.7 second (measured on my machine, Core i5-14400F and DDR4-3200 32GB).
 2. Modern UI  
    This app uses Java Swing library and Flatlaf, so it has Modern UI.
    You don't have to do special actions or run any commands.
