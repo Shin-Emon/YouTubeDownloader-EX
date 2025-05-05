@@ -49,10 +49,9 @@ YouTube Downloader EX を使えば、YouTubeの動画を、簡単に、速くダ
 # Screenshots
 
 ### English
-
-![v1.0.0 rc 3 english](https://github.com/user-attachments/assets/e1d3af2b-c135-4c36-a0ea-b5d9a8bb70d5 "Screenshot (english)")
+![rc3-en_us](https://github.com/user-attachments/assets/dc28a3e1-25dd-4b19-a3e5-c3239ed1e252 "Screenshot (English)")
 
 ### 日本語 (Japanese)
-![v1.0.0 rc 3 japanese](https://github.com/user-attachments/assets/b0b60b2b-7ec7-4177-a325-db767896c31d "スクリーンショット (日本語)")
+![rc3-ja_jp](https://github.com/user-attachments/assets/2c8adcde-7071-49bd-9d5a-107ca0a9d94c "スクリーンショット (日本語)")
 
 Written by Shin-Emon
