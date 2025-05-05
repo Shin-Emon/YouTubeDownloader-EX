@@ -43,4 +43,13 @@ YouTube Downloader EX を使えば、YouTubeの動画を、簡単に、速くダ
 
 また、私は英語がうまくないので、このREADMEを含め、いくつかの文章におかしなところがあるかもしれません。そのようなときは、私に何らかの形で報告していただけると幸いです。
 
+# Screenshots
+
+### English
+
+![v1 0 0 rc 3](https://github.com/Shin-Emon/YouTubeDownloader-EX/screenshot/rc3-en_us.png)
+
+### 日本語 (Japanese)
+![v1 0 0 rc 3](https://github.com/Shin-Emon/YouTubeDownloader-EX/screenshot/rc3-ja_jp.png)
+
 Written by Shin-Emon
