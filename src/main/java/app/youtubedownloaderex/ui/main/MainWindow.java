@@ -19,7 +19,7 @@ public class MainWindow extends JFrame {
 
         var file = new JMenu(LangAssets.get("window.menubar.file"));
         var settings = new JMenuItem(LangAssets.get("window.menubar.file.settings"));
-        file.add(settings);
+//        file.add(settings);
 
         var exit = new JMenuItem(LangAssets.get("window.menubar.file.exit"));
         exit.addActionListener(e -> Main.exit(0));
