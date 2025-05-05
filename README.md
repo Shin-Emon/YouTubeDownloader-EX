@@ -1,5 +1,8 @@
 # YouTube Downloader EX
 
+日本の方へ: 日本語のREADMEはこのファイルの後半にあります。
+
+
 ### English Edition
 YouTube Downloader EX allows you to download YouTube videos easily.
 You can download them as mp4, wav, mp3, and m4a.
