@@ -6,7 +6,7 @@ import javax.swing.*;
 import java.util.Locale;
 
 public class AppConstraints {
-    public static final Locale LOCALE = Locale.JAPAN;
+    public static final Locale LOCALE = Locale.US;
 
     public static final String TITLE = LangAssets.get("common.app.title");
 

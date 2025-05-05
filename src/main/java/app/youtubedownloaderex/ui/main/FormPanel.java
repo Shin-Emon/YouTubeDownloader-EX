@@ -221,7 +221,7 @@ public class FormPanel extends JPanel {
 
         panel.add(title);
         panel.add(saveMetadata);
-        panel.add(isRangeSet);
+//        panel.add(isRangeSet);
 
         isRangeSet.addActionListener(e -> {
             rangeSelectButton.setVisible(isRangeSet.isSelected());
