@@ -1,10 +1,9 @@
 # YouTube Downloader EX
 
+### English Edition
 YouTube Downloader EX allows you to download YouTube videos easily.
 You can download them as mp4, wav, mp3, and m4a.
 Let's lead a happy and pleasant video life with YouTube Downloader EX.
-
-## English Edition
 
 ## Features
 
@@ -25,7 +24,8 @@ This app may contain a lot of bugs. If you find something that seems a bug, plea
 Also, I am not good at English, so the sentences including this README may be weired.
 In such time, please let me know about it.
 
-## 日本語版 (Japanese Edition)
+### 日本語版 (Japanese Edition)
+YouTube Downloader EX を使えば、YouTubeの動画を、簡単に、速くダウンロードできます。mp4はもちろん、wav, mp3, m4a形式に対応しています。YouTube Downloader EXで、快適なYouTubeライフを送りましょう。
 
 ## 特徴
 
