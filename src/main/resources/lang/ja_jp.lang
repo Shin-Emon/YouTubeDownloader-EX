@@ -1,0 +1,57 @@
+# Common
+common.app.title=YouTube Downloader EX
+
+# Dialog
+dialog.splash.loading=ロード中...
+dialog.error.font=フォント読み込みエラーが発生しました。
+dialog.error.common=エラーが発生しました。
+dialog.error.form=フォームデータを読み込めませんでした。
+dialog.info.detail_info=詳細情報
+
+# MainPanel components
+main.component.button.download=ダウンロード
+
+# Form label
+form.label.url=URL
+form.label.format=形式
+form.label.quality=品質
+form.label.save_location=保存先
+form.label.advanced_settings=詳細設定
+
+# Form components
+form.component.check.playlist=プレイリスト
+form.component.button.preview=プレビュー
+form.component.button.select=選択...
+form.component.button.select_range=出力範囲を選択
+
+form.component.check.embedding_metadata=メタデータを埋め込む
+form.component.check.specify_range=出力範囲を指定する
+
+# Window titles
+window.title.fetching_title=タイトル取得中...
+window.title.select_save_location=保存先フォルダを選択...
+window.title.preview=プレビュー
+window.title.downloading=ダウンロード中...
+
+# Window menu bars
+window.menubar.file=ファイル
+window.menubar.file.settings=設定...
+window.menubar.file.exit=終了
+
+# Quality text (audio)
+text.quality.256k=最高音質
+text.quality.160k=高音質
+text.quality.128k=通常音質
+text.quality.96k=最低音質
+
+# Quality text (video)
+text.quality.4k=4K
+text.quality.wqhd=WQHD
+text.quality.fhd=フルHD
+text.quality.hd=HD
+text.quality.sd=SD
+text.quality.preview=プレビュー
+
+# Format text
+text.format.video=動画
+text.format.audio=音声

@@ -4,6 +4,7 @@ import app.youtubedownloaderex.AppConstraints;
 import app.youtubedownloaderex.core.DataLoader;
 import app.youtubedownloaderex.core.data.*;
 import app.youtubedownloaderex.core.preview.PreviewManager;
+import app.youtubedownloaderex.lang.LangAssets;
 import app.youtubedownloaderex.ui.common.CLabel;
 import app.youtubedownloaderex.ui.common.ColorAssets;
 import app.youtubedownloaderex.ui.common.MessageDialog;
@@ -46,10 +47,10 @@ public class FormPanel extends JPanel {
     /* ******** 詳細設定 ********* */
 
     // メタデータ保存
-    private final JCheckBox saveMetadata = new JCheckBox("メタデータを埋め込む");
+    private final JCheckBox saveMetadata = new JCheckBox(LangAssets.get("form.component.check.embedding_metadata"));
 
     // 出力範囲指定する？
-    private final JCheckBox isRangeSet = new JCheckBox("出力範囲を指定する");
+    private final JCheckBox isRangeSet = new JCheckBox(LangAssets.get("form.component.check.specify_range"));
 
     private final JTextField startMin = new JTextField(4);
     private final JTextField startSec = new JTextField(4);
@@ -74,10 +75,10 @@ public class FormPanel extends JPanel {
         layout.setAutoCreateGaps(true);
         layout.setAutoCreateContainerGaps(true);
 
-        CLabel urlLbl = new CLabel("URL");
+        CLabel urlLbl = new CLabel(LangAssets.get("form.label.url"));
 
-        JCheckBox playlistCheck = new JCheckBox("プレイリスト");
-        JButton previewButton = new JButton("プレビュー");
+        JCheckBox playlistCheck = new JCheckBox(LangAssets.get("form.component.check.playlist"));
+        JButton previewButton = new JButton(LangAssets.get("form.component.button.preview"));
         previewButton.addActionListener(e -> {
             try {
                 String url = urlInput.getText();
@@ -94,7 +95,7 @@ public class FormPanel extends JPanel {
                 );
                 PreviewManager.startPreviewing(formData);
             } catch (IOException ex) {
-                MessageDialog.throwErrorMessage("フォームデータをロードできませんでした。", ex);
+                MessageDialog.throwErrorMessage(LangAssets.get("dialog.error.form"), ex);
             }
         });
 
@@ -105,7 +106,7 @@ public class FormPanel extends JPanel {
 
                     if (Validator.isValidURL(urlInput.getText())) {
                         urlInput.setForeground(Color.BLACK);
-                        title.setText("タイトル取得中...");
+                        title.setText(LangAssets.get("window.title.fetching_title"));
                         DataLoader.fetchMetadata(getFormData(), content -> {
                             title.setText(content.getTitle());
                         });
@@ -113,7 +114,7 @@ public class FormPanel extends JPanel {
                         urlInput.setForeground(ColorAssets.WINE_RED);
                     }
                 } catch (IOException ex) {
-                    MessageDialog.throwErrorMessage("エラーで草w", ex);
+                    MessageDialog.throwErrorMessage(LangAssets.get("dialog.error.common"), ex);
                 }
             }
 
@@ -133,14 +134,14 @@ public class FormPanel extends JPanel {
             }
         });
 
-        CLabel formatLbl = new CLabel("形式");
+        CLabel formatLbl = new CLabel(LangAssets.get("form.label.format"));
         fileFormatSelector.addItem(FileFormat.MP4);
         fileFormatSelector.addItem(FileFormat.WAVE);
         fileFormatSelector.addItem(FileFormat.M4A);
         fileFormatSelector.addItem(FileFormat.MP3);
 
 
-        CLabel qualityLbl = new CLabel("品質");
+        CLabel qualityLbl = new CLabel(LangAssets.get("form.label.quality"));
         audioQualitySelector.addItem(AudioQuality.AUDIO_256K);
         audioQualitySelector.addItem(AudioQuality.AUDIO_160K);
         audioQualitySelector.addItem(AudioQuality.AUDIO_128K);
@@ -159,17 +160,17 @@ public class FormPanel extends JPanel {
             formatChanged((FileFormat) fileFormatSelector.getSelectedItem());
         });
 
-        CLabel destLbl = new CLabel("出力先");
+        CLabel saveLocationLabel = new CLabel(LangAssets.get("form.label.save_location"));
         destInput.setText(AppConstraints.DOWNLOADS);
 
-        JButton destSelectButton = getDestSelectButton();
+        JButton saveSelectButton = getDestSelectButton();
 
         compos = new JComponent[][] {
                 {urlLbl, urlInput, previewButton, playlistCheck},
                 {null, title, null, null},
                 {formatLbl, fileFormatSelector, null, null},
                 {qualityLbl, videoQualitySelector, null, null},
-                {destLbl, destInput, destSelectButton, null},
+                {saveLocationLabel, destInput, saveSelectButton, null},
         };
 
 //        compos = new JComponent[][] {
@@ -182,40 +183,40 @@ public class FormPanel extends JPanel {
         initLayout(layout, compos);
 
         add(mainSettingPanel);
-        add(detailSettingPanel());
+        add(advancedSettingPanel());
     }
 
     private JButton getDestSelectButton() {
-        JButton destSelectButton = new JButton("選択...");
+        JButton destSelectButton = new JButton(LangAssets.get("form.component.button.select"));
         destSelectButton.addActionListener(ev -> {
             if (destInput.getText().isBlank()) {
                 destInput.setText(AppConstraints.DOWNLOADS);
             }
             var selector = new JFileChooser(destInput.getText());
             selector.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-            selector.setDialogTitle("出力先フォルダを選択...");
+            selector.setDialogTitle(LangAssets.get("window.title.select_save_location"));
 
             int s = selector.showSaveDialog(this);
             if (s == JFileChooser.APPROVE_OPTION) {
                 var file = selector.getSelectedFile();
                 destInput.setText(file.getAbsolutePath());
             } else if (s == JFileChooser.ERROR_OPTION) {
-                MessageDialog.throwErrorMessage("むりやった。", null);
+                MessageDialog.throwErrorMessage(LangAssets.get("dialog.error.common"), null);
             }
         });
         return destSelectButton;
     }
 
-    private JPanel detailSettingPanel() {
+    private JPanel advancedSettingPanel() {
         var panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         panel.setBorder(BorderFactory.createEmptyBorder(15, 5, 5, 5));
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 
-        var title = new CLabel("詳細設定");
+        var title = new CLabel(LangAssets.get("form.label.advanced_settings"));
 //        title.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.LIGHT_GRAY));
 
-        var rangeSelectButton = new JButton("出力範囲を選択");
+        var rangeSelectButton = new JButton(LangAssets.get("form.component.button.select_range"));
         rangeSelectButton.setVisible(isRangeSet.isSelected());
 
         panel.add(title);

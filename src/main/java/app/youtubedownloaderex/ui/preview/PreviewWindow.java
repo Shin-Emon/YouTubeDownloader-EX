@@ -1,6 +1,7 @@
 package app.youtubedownloaderex.ui.preview;
 
 import app.youtubedownloaderex.core.preview.PreviewManager;
+import app.youtubedownloaderex.lang.LangAssets;
 import uk.co.caprica.vlcj.player.component.EmbeddedMediaPlayerComponent;
 
 import javax.swing.*;
@@ -14,7 +15,7 @@ public class PreviewWindow extends JFrame {
 
     public PreviewWindow(JFrame parent) {
 
-        setTitle("[プレビュー] " + PreviewManager.getContent().getTitle());
+        setTitle("[" + LangAssets.get("window.title.preview") + "] " + PreviewManager.getContent().getTitle());
         setResizable(false);
 
         panel = new PreviewPanel(this);

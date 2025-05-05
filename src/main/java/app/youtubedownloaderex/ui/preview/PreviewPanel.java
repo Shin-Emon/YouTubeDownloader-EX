@@ -5,6 +5,7 @@ import app.youtubedownloaderex.core.data.AreaSettings;
 import app.youtubedownloaderex.core.data.TempAreaStatus;
 import app.youtubedownloaderex.core.preview.PlayTimeFormatter;
 import app.youtubedownloaderex.core.preview.PreviewManager;
+import app.youtubedownloaderex.lang.LangAssets;
 import app.youtubedownloaderex.ui.common.Assets;
 import app.youtubedownloaderex.ui.common.ColorAssets;
 import app.youtubedownloaderex.ui.common.MessageDialog;
@@ -181,7 +182,7 @@ public class PreviewPanel extends JPanel implements ChangeListener {
             }
 
         } catch (Exception e) {
-            MessageDialog.throwErrorMessage("よくわからんエラー。", e);
+            MessageDialog.throwErrorMessage(LangAssets.get("dialog.error.common"), e);
         }
     }
 }

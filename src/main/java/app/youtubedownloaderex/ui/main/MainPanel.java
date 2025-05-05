@@ -1,6 +1,7 @@
 package app.youtubedownloaderex.ui.main;
 
 import app.youtubedownloaderex.core.DataLoader;
+import app.youtubedownloaderex.lang.LangAssets;
 import app.youtubedownloaderex.ui.common.Assets;
 import app.youtubedownloaderex.ui.common.CLabel;
 import app.youtubedownloaderex.ui.common.MessageDialog;
@@ -22,7 +23,7 @@ public class MainPanel extends JPanel {
         setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
 
-        CLabel title = new CLabel("YouTube Downloader EX");
+        CLabel title = new CLabel(LangAssets.get("common.app.title"));
         title.setBorder(BorderFactory.createEmptyBorder(0, 10, 5, 0));
         title.setFont(Assets.notoSans(20));
         title.italic();
@@ -45,7 +46,7 @@ public class MainPanel extends JPanel {
     }
 
     private JButton getDownloadButton() {
-        JButton downloadButton = new JButton("ダウンロード");
+        JButton downloadButton = new JButton(LangAssets.get("main.component.button.download"));
         downloadButton.setFont(downloadButton.getFont().deriveFont(18f));
 
         downloadButton.addActionListener(ev -> {
@@ -55,7 +56,7 @@ public class MainPanel extends JPanel {
             try {
                 DataLoader.download(formData, statusWindow.statusPanel, statusWindow.statusPanel);
             } catch (IOException e) {
-                MessageDialog.throwErrorMessage("エラーで草www 大草原不可避www", e);
+                MessageDialog.throwErrorMessage(LangAssets.get("dialog.error.common"), e);
             }
         });
 

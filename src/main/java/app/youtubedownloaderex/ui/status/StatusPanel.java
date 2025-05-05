@@ -44,7 +44,7 @@ public class StatusPanel extends JPanel implements StatusListener, LogListener {
 
         if (d2.equals("finished")) {
             max = 0.0;
-        } else if (d2.equals("closed")) {
+        } else if (d2.equals("ALLDONE")) {
             progressBar.setValue(progressBar.getMaximum());
             MessageDialog.showInfoMessage("ダウンロード完了！");
             parentWindow.setVisible(false);

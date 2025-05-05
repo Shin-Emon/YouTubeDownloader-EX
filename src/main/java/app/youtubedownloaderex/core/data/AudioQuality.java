@@ -1,11 +1,13 @@
 package app.youtubedownloaderex.core.data;
 
+import app.youtubedownloaderex.lang.LangAssets;
+
 public enum AudioQuality implements Quality {
 
-    AUDIO_256K(256, "最強 256Kbps"),
-    AUDIO_160K(160, "いいやつ 160Kbps"),
-    AUDIO_128K(128, "おすすめ 128Kbps"),
-    AUDIO_96K(96, "やめとけ 96Kbps"),
+    AUDIO_256K(256, "256Kbps (" + LangAssets.get("text.quality.256k") + ")"),
+    AUDIO_160K(160, "160Kbps (" + LangAssets.get("text.quality.160k") + ")"),
+    AUDIO_128K(128, "128Kbps (" + LangAssets.get("text.quality.128k") + ")"),
+    AUDIO_96K(96, "96Kbps (" + LangAssets.get("text.quality.96k") + ")"),
 
     ;
 

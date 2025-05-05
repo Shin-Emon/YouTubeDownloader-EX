@@ -1,8 +1,15 @@
 package app.youtubedownloaderex;
 
+import app.youtubedownloaderex.lang.LangAssets;
+
 import javax.swing.*;
+import java.util.Locale;
 
 public class AppConstraints {
+    public static final Locale LOCALE = Locale.US;
+
+    public static final String TITLE = LangAssets.get("common.app.title");
+
     public static final int MAJOR = 1;
     public static final int MINOR = 0;
     public static final int SUB_MIN = 0;

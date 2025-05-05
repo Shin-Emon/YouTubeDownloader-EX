@@ -10,6 +10,7 @@ module YouTubeDownloaderEX {
     opens script;
     opens bin;
     opens script.dist;
+    opens lang;
 
 
 }

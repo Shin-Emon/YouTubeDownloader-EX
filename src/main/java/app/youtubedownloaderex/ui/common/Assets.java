@@ -1,5 +1,6 @@
 package app.youtubedownloaderex.ui.common;
 
+import app.youtubedownloaderex.lang.LangAssets;
 import app.youtubedownloaderex.main.Main;
 
 import javax.imageio.ImageIO;
@@ -25,7 +26,7 @@ public class Assets {
             PLAY_BACK = ImageIO.read(Objects.requireNonNull(Main.class.getClassLoader().getResourceAsStream("icon/play-back.png")));
             PAUSE = ImageIO.read(Objects.requireNonNull(Main.class.getClassLoader().getResourceAsStream("icon/pause.png")));
         } catch (IOException | FontFormatException e) {
-            MessageDialog.throwErrorMessage("フォント読み込みむりやった。", e);
+            MessageDialog.throwErrorMessage(LangAssets.get("dialog.error.font"), e);
         }
     }
 

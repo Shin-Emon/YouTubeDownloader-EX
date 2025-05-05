@@ -5,6 +5,7 @@ import app.youtubedownloaderex.AppConstraints;
 import app.youtubedownloaderex.core.DataLoader;
 import app.youtubedownloaderex.core.data.Content;
 import app.youtubedownloaderex.core.data.FormData;
+import app.youtubedownloaderex.lang.LangAssets;
 import app.youtubedownloaderex.ui.common.MessageDialog;
 import app.youtubedownloaderex.ui.preview.PreviewWindow;
 import uk.co.caprica.vlcj.player.base.MediaPlayer;
@@ -41,7 +42,7 @@ public class PreviewManager {
             try {
                 DataLoader.download(previewData, PreviewManager::listenStatus, PreviewManager::listenLog, "temp");
             } catch (IOException e) {
-                MessageDialog.throwErrorMessage("むりやった。", e);
+                MessageDialog.throwErrorMessage(LangAssets.get("dialog.error.common"), e);
             }
         });
 
@@ -90,7 +91,7 @@ public class PreviewManager {
                     Thread.sleep(SLEEP_DURATION);
                 }
             } catch (Exception e) {
-                MessageDialog.throwErrorMessage("ロードエラー。", e);
+                MessageDialog.throwErrorMessage(LangAssets.get("dialog.error.common"), e);
             }
         }).start();
     }

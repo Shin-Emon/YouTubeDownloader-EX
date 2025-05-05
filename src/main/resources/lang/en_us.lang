@@ -1,0 +1,57 @@
+# Common
+common.app.title=YouTube Downloader EX
+
+# Dialog
+dialog.splash.loading=Loading...
+dialog.error.font=Couldn't load font data.
+dialog.error.common=An error has occurred.
+dialog.error.form=Couldn't load form data.
+dialog.info.detail_info=Detail Info
+
+# MainPanel components
+main.component.button.download=Download
+
+# Form label
+form.label.url=URL
+form.label.format=Format
+form.label.quality=Quality
+form.label.save_location=Save Location
+form.label.advanced_settings=Advanced Settings
+
+# Form components
+form.component.check.playlist=Playlist
+form.component.button.preview=Preview
+form.component.button.select=Select...
+form.component.button.select_range=Select output range
+
+form.component.check.embedding_metadata=Embed Metadata
+form.component.check.specify_range=Use output range
+
+# Window titles
+window.title.fetching_title=Fetching title...
+window.title.select_save_location=Select save location...
+window.title.preview=Preview
+window.title.downloading=Downloading...
+
+# Window menu bars
+window.menubar.file=File
+window.menubar.file.settings=Settings...
+window.menubar.file.exit=Exit
+
+# Quality text (audio)
+text.quality.256k=Highest Quality
+text.quality.160k=Good Quality
+text.quality.128k=Standard Quality
+text.quality.96k=Lowest Quality
+
+# Quality text (video)
+text.quality.4k=Ultra HD
+text.quality.wqhd=WQHD
+text.quality.fhd=Full HD
+text.quality.hd=HD
+text.quality.sd=SD
+text.quality.preview=Preview
+
+# Format text
+text.format.video=Video
+text.format.audio=Audio

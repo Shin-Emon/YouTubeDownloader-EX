@@ -6,6 +6,7 @@ import app.youtubedownloaderex.core.data.FormData;
 import app.youtubedownloaderex.core.data.VideoQuality;
 import app.youtubedownloaderex.core.io.IO;
 import app.youtubedownloaderex.core.preview.PreviewManager;
+import app.youtubedownloaderex.lang.LangAssets;
 import app.youtubedownloaderex.ui.common.MessageDialog;
 import app.youtubedownloaderex.ui.main.MainWindow;
 import app.youtubedownloaderex.ui.splash.SplashWindow;
@@ -15,6 +16,7 @@ import com.sun.jna.NativeLibrary;
 import javax.swing.*;
 import java.io.IOException;
 import java.nio.file.Paths;
+import java.util.Locale;
 
 public class Main {
 
@@ -22,9 +24,9 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-
 //        new StatusReceiver().start();
-        var splash = new SplashWindow("ロード中...");
+        var splash = new SplashWindow(LangAssets.get("dialog.splash.loading"));
+
 
         try {
             // check vlc
@@ -34,10 +36,10 @@ public class Main {
             IO.initialize();
             IO.copyAssets();
         } catch (Exception e) {
-            e.printStackTrace();
             splash.setVisible(false);
-            MessageDialog.throwErrorMessage("あかんかった。", e);
+            MessageDialog.throwErrorMessage(LangAssets.get("dialog.error.common"), e);
         }
+
 
         if (AppConstraints.DEBUG_MODE) {
             MessageDialog.showInfoMessage("デバッグモードで起動します。");
@@ -63,7 +65,7 @@ public class Main {
         try {
             IO.removePreviewData();
         } catch (IOException e) {
-            MessageDialog.throwErrorMessage("エラーで草www 実害はないエラーやけど(笑)", e);
+            MessageDialog.throwErrorMessage(LangAssets.get("dialog.error.common"), e);
         }
 
         System.exit(exitCode);
