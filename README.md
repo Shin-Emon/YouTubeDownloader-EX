@@ -1,6 +1,6 @@
 # YouTube Downloader EX
 
-日本の方へ: 日本語のREADMEはこのファイルの後半にあります。
+*日本の方へ: **日本語**のREADMEはこのファイルの後半にあります。*
 
 
 ### English Edition
