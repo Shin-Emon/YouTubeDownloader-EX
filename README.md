@@ -20,6 +20,15 @@ Let's lead a happy and pleasant video life with YouTube Downloader EX.
    In this app, yt-dlp is used for the downloading system. yt-dlp is an optimized build of 'youtube-dl', a command-line app to download YouTube videos. It achieved fast downloading.
    Thus, this app gives you a great experience about downloading.
 
+## System Requirements
+
+- Windows 10 or later
+- At least 1GB of available disk space
+- Internet connection
+- Monitor with a resolution of 800x600 or higher
+
+Tested on Windows 11 24H2.
+
 ## Notes
 
 This app may contain a lot of bugs. If you find something that seems a bug, please report as an Issue.
@@ -40,11 +49,21 @@ YouTube Downloader EX を使えば、YouTubeの動画を、簡単に、速くダ
 3. 高速なダウンロード  
    このアプリは、ダウンロードの内部処理にyt-dlpを使用しています。yt-dlpというのは、YouTube動画ダウローダー 'youtube-dl' を最適化したもので、高速なダウンロードを実現しています。
 
+## 必要条件
+
+- Windows 10 以降
+- 1GB以上のディスク空き容量
+- インターネット回線
+- 800x600以上の解像度があるモニター
+
+動作確認を行ったのは、Windows 11 24H2です。
+
 ## メモ
 
 このアプリには、かなりのバグがあるかもしれません。もしバグと思われるものを見つけられたら、Issueとしてご報告ください。
 
 また、私は英語がうまくないので、このREADMEを含め、いくつかの文章におかしなところがあるかもしれません。そのようなときは、私に何らかの形で報告していただけると幸いです。
+
 
 # Screenshots
 
